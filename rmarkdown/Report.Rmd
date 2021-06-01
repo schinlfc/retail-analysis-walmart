@@ -2,7 +2,7 @@
 title: "Analysis Report--Walmart Sales Prediction"
 author: "Sayorn Chin"
 date: "07/30/2021"
-output: rmarkdown::html_document
+output: rmarkdown::github_document
 ---
 
 ### Objective

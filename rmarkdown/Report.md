@@ -129,7 +129,7 @@ Q3 <-
     df,
     start = "2012-07-01",
     end = "2012-09-30")
-# Defining the start and end date of Q3
+# Defining the start and end date of Q2
 Q2 <- 
   selectByDate( 
     df,
@@ -191,7 +191,7 @@ the third quarter of 2012.
 # Weekly sales between nonholidays and holidays
 df %>% group_by(holiday_flag) %>%
   summarise(mean_sales_of_nonholiday_and_holiday = 
-  mean(weekly_sales)) # Create dummy variable for the dates of Super Bowl
+  mean(weekly_sales)) 
 ```
 
     ## # A tibble: 2 x 2
@@ -201,6 +201,7 @@ df %>% group_by(holiday_flag) %>%
     ## 2            1                             1122888.
 
 ``` r
+# Create dummy variable for the dates of Super Bowl
 df$super_bowl <- 
   ifelse(df$date == "2010-02-12" | df$date == "2011-02-11" | 
   df$date == "2012-02-10" | df$date == "2013-02-08", 1, 0)
