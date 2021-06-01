@@ -3,7 +3,7 @@ Analysis Report–Walmart Sales Prediction
 Sayorn Chin
 07/30/2021
 
-### Goal
+### Objective
 
 ##### The objective of this project is to develop a statistical model based on historical sales data. First, I use all 45 Walmart stores to derive some statistical values. Second, I use Store \#1 to build statistical models in order to predict weekly sales. Lastly, I perform model selection and evaluation by incorporating different evaluation metrics.
 
@@ -1013,7 +1013,7 @@ cor(act_pred4)
 Correlation shows a low value of approximately 5.8%, so it means that
 actuals values and predicted values have different directional movement.
 
-Here an overview of the first 10 rows of the new dataframe composed by
+Here an overview of the first 10 rows of the new data frame composed by
 actual values and predicted values:
 
 ``` r
@@ -1086,7 +1086,7 @@ knitr::kable(table, "pipe", col.names = c("Models", "R-squared",
 
 ### 4 Conclusion
 
-##### This project aims to get insightful information on all 45 Walmart stores. I found that (1) Store \#1 had the largest weekly sales from 2010–2012; (2) only 10 stores experienced positive third quarter growth in weekly sales from 2010–2012; (3) Thanksgiving holiday played a huge role in increasing weekly sales, followed by the Super Bowl. Surprisingly, during Christmas and Labour Day, average weekly sales across 45 stores went down from 2010–2012. Finally, modelling weekly sales prediction was a challenged for a numerous reasons: (1) I chose to focuse only on Store \#1 and therefore, I had to deal with low number of observations (2) there were not enough variables to choose from for best modelling outcome. It would be beneficial if data on markdown, store types, prices of good, distance and location of store, membership status, etc. Nontheless, I managed to make four models from the available data for Store \#1. As noted in the result section, it is clear that Model III performs the best in the most part of the accuracy metrics when using test dataset.
+##### This project aims to get insightful information on all 45 Walmart stores. I found that (1) Store \#1 had the largest weekly sales from 2010–2012; (2) only 10 stores experienced positive third quarter growth in weekly sales from 2010–2012; (3) Thanksgiving holiday played a huge role in increasing weekly sales, followed by the Super Bowl. Surprisingly, during Christmas and Labour Day, average weekly sales across 45 stores went down from 2010–2012. Finally, modelling weekly sales prediction was a challenged for a numerous reasons: (1) I chose to focuse only on Store \#1 and therefore, I had to deal with low number of observations (2) there were not enough variables to choose from for best modelling outcome. It would be beneficial if data on markdowns, store types, prices of good, distance and location of store, membership status, etc were available. Nontheless, I managed to make four models from the available data for Store \#1. As noted in the summary table, it is clear that Model III performs the best for the most part of the accuracy metrics when using test dataset.
 
 ### References
 

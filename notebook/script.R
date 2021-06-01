@@ -69,7 +69,7 @@ Q3 <-
     df,
     start = "2012-07-01",
     end = "2012-09-30")
-# Defining the start and end date of Q3
+# Defining the start and end date of Q2
 Q2 <- 
   selectByDate( 
     df,
@@ -99,7 +99,7 @@ Q3_Q2_merged %>%
 
 ## Some holidays have a negative impact on sales. Find out holidays which have 
 # higher sales than the mean sales in non-holiday season for all stores together
-# Weekly sales between nonholidays and holidays
+# Weekly sales between non-holidays and holidays
 df %>% group_by(holiday_flag) %>%
   summarise(mean_sales_of_nonholiday_and_holiday = 
   mean(weekly_sales))
@@ -177,7 +177,7 @@ df1$week <- lubridate::week(ymd(df1$date))
 # Second, I need to split into train/test dataset and set seed for 
 # reproducible results
 set.seed(123) 
-# Test side of 25%
+# Test size of 25%
 sample_size <- floor(0.75 * nrow(df1))
 train_index <- sample(seq_len(nrow(df1)), size = sample_size)
 train <- df1[train_index, ]
@@ -316,7 +316,7 @@ act_pred1 <- data.frame(cbind(actuals=test$weekly_sales,
 # Correlation accuracy
 cor(act_pred1) 
 
-# Here an overview of the first 10 rows of the new dataframe composed by actual 
+# Here an overview of the first 10 rows of the new data frame composed by actual 
 # values and predicted values:
 head(act_pred1, n=10)
 
@@ -372,7 +372,7 @@ act_pred2 <- data.frame(cbind(actuals=test$weekly_sales,
 # Correlation accuracy
 cor(act_pred2) 
 
-# Here an overview of the first 10 rows of the new dataframe composed by actual
+# Here an overview of the first 10 rows of the new data frame composed by actual
 # values and predicted values:
 # Actuals and predicteds
 head(act_pred2, n=10)
